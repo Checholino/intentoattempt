@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Simple</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+        }
+        input {
+            margin: 10px;
+            padding: 10px;
+            font-size: 16px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: white;
+            color: black;
+            border: none;
+            cursor: pointer;
+        }
+        #resultado {
+            margin-top: 20px;
+            font-size: 18px; /* Ajusté el tamaño para que el texto largo sea legible */
+            display: none;
+            text-align: left; /* Alineado a la izquierda para mejor lectura del párrafo */
+            max-width: 600px; /* Limité el ancho para no ocupar toda la pantalla */
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>¡Fantastic! Maybe it was too easy, wasn't it?</h1>
+    <h1>Ingresa el Código</h1>
+    <input type="text" id="codigo" placeholder="Escribe el código aquí">
+    <br>
+    <button onclick="verificarCodigo()">Verificar</button>
+    <div id="resultado"></div>
+
+    <script>
+        function verificarCodigo() {
+            const codigoIngresado = document.getElementById('codigo').value;
+            const resultado = document.getElementById('resultado');
+            if (codigoIngresado === 'astonishing1234') {
+                resultado.innerHTML = '<p>Una buena forma de entender el proceso de "acercarnos" a Dios es un límite matemático. Te lo explicaré (preferiblemente agarra un lápiz y una hoja): Un limite matemático piénsalo como una recta numérica. La recta tiene un valor de 0 a 1 y el objetivo es llegar al uno. Pero ojo, por cada "turno" se debe avanzar la mitad del trayecto (ir avanzando por mitades desde 1. El uno se divide en 2, 0.5 se divide en dos y así sucesivamente), es decir, de 0 a 0.5, de 0.5 a 0.75, de 0.75 a 0.875, de 0.875 a 0.9375... Pero... Es obvio que vamos a llegar a uno muy rápido, ¿no? Pues resulta que nos tomaría una eternidad llegar al entero 1. Así mismo pasa en nuestra relacion con Dios. "Sed Santos como yo soy Santo" dice el Señor; y si, avanzamos todos los días, es posible, solo que nunca podremos ser santos en el sentido de totalidad aquí en la tierra, pues seguimos pecando.</p>';
+                resultado.style.display = 'block';
+            } else if (codigoIngresado === 'milhoja') {
+                resultado.innerHTML = '<p>Colosenses 1:16-17 nos da una perspectiva en donde absolutamente todo, incluso una milhoja tiesa de hace 2 semanas -- siendo un manifiesto de la creatividad humana-- existe por Él, por medio de Él y para Él. Tú, y yo, estamos en la misma condición de esa milhoja. Que se haga su voluntad, no la mía, no la tuya, tampoco la nuestra. Dios te bendiga Xiuraldy.</p>';
+                resultado.style.display = 'block';
+            } else {
+                resultado.innerHTML = 'Código incorrecto. Intenta de nuevo.';
+                resultado.style.display = 'block';
+            }
+        }
+    </script>
+</body>
+</html>
